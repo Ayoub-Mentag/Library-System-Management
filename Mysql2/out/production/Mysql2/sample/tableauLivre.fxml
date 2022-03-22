@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="514.0" prefWidth="693.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.tableauLivreController">
+    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#433951" height="540.0" layoutX="540.0" layoutY="-6.0" stroke="BLACK" strokeType="INSIDE" width="172.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#433951" height="550.0" layoutX="-35.0" layoutY="-16.0" stroke="BLACK" strokeType="INSIDE" width="198.0" />
+        <TableView fx:id="tBooks" layoutX="88.0" layoutY="48.0" onMouseClicked="#getSelected" prefHeight="264.0" prefWidth="546.0">
+            <columns>
+                <TableColumn fx:id="code_book" prefWidth="54.0" text="Code" />
+                <TableColumn fx:id="titre_book" prefWidth="187.0" text="Titre" />
+                <TableColumn fx:id="auteur_book" prefWidth="130.0" text="Auteur" />
+                <TableColumn fx:id="edition_book" prefWidth="83.0" text="Edition" />
+                <TableColumn fx:id="nbExemplaire_book" prefWidth="89.0" text="NbExemplaire" />
+            </columns>
+        </TableView>
+        <Button layoutX="4.0" layoutY="393.0" mnemonicParsing="false" onAction="#modifierLivre" prefHeight="38.0" prefWidth="155.0" text="Modifier">
+         <font>
+            <Font size="17.0" />
+         </font></Button>
+        <Button layoutX="4.0" layoutY="322.0" mnemonicParsing="false" onAction="#ajouterLivre" prefHeight="38.0" prefWidth="155.0" style="-fx-background-color: #ffffff;" text="Ajouter">
+         <font>
+            <Font size="17.0" />
+         </font></Button>
+        <Button layoutX="4.0" layoutY="460.0" mnemonicParsing="false" onAction="#supprimerLivre" prefHeight="38.0" prefWidth="155.0" text="Supprimer">
+         <font>
+            <Font size="17.0" />
+         </font></Button>
+        <TextField fx:id="txt_edition" layoutX="189.0" layoutY="398.0" promptText="Edition" />
+        <TextField fx:id="txt_titre" layoutX="190.0" layoutY="363.0" promptText="Titre" />
+        <TextField fx:id="txt_auteur" layoutX="189.0" layoutY="448.0" promptText="Auteur" />
+        <TextField fx:id="txt_nbExemplaire" layoutX="189.0" layoutY="479.0" promptText="Nombre d'exemplaire" />
+        <TextField fx:id="txt_code" layoutX="190.0" layoutY="321.0" promptText="Code">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font></TextField>
+      <Button layoutX="549.0" layoutY="322.0" mnemonicParsing="false" onMouseClicked="#refresh" prefHeight="38.0" prefWidth="155.0" text="Actualiser">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button layoutX="4.0" layoutY="15.0" mnemonicParsing="false" onAction="#ajouterLivre" onMouseClicked="#back" prefHeight="25.0" prefWidth="63.0" text="&lt;----">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #171717;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DashboardController">
+   <top>
+      <AnchorPane prefHeight="224.0" prefWidth="600.0" style="-fx-background-color: #171717;" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c7a1ff" height="413.0" layoutX="-4.0" layoutY="-11.0" stroke="BLACK" strokeType="INSIDE" width="64.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c7a1ff" height="54.0" layoutX="132.0" layoutY="107.0" onMouseClicked="#voirLivres" stroke="BLACK" strokeType="INSIDE" width="396.0" />
+            <Text layoutX="141.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Totale des Livres" wrappingWidth="217.521484375">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <Label fx:id="nb_livre" layoutX="405.0" layoutY="125.0" text="Label">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c7a1ff" height="54.0" layoutX="132.0" layoutY="195.0" onMouseClicked="#voirMembres" stroke="BLACK" strokeType="INSIDE" width="395.0" />
+            <Text layoutX="140.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre des membre" wrappingWidth="263.521484375">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <Label fx:id="nb_membre" layoutX="408.0" layoutY="215.0" text="Label">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c7a1ff" height="54.0" layoutX="133.0" layoutY="276.0" onMouseClicked="#voirEmprunteurs" stroke="BLACK" strokeType="INSIDE" width="395.0" />
+            <Text layoutX="141.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre d'emprunteur" wrappingWidth="263.521484375">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <Label fx:id="nb_emprunteur" layoutX="408.0" layoutY="293.0" text="Label">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Button layoutX="5.0" layoutY="24.0" mnemonicParsing="false" onMouseClicked="#userLogout" prefHeight="25.0" prefWidth="48.0" text="Exit" />
+         </children>
+      </AnchorPane>
+   </top>
+   <left>
+      <AnchorPane prefHeight="176.0" prefWidth="606.0" BorderPane.alignment="CENTER" />
+   </left>
+</BorderPane>

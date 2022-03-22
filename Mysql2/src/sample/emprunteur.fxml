@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.EmprunteurController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#433951" height="410.0" layoutX="-25.0" layoutY="-6.0" stroke="BLACK" strokeType="INSIDE" width="229.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#433951" height="410.0" layoutX="428.0" layoutY="-6.0" stroke="BLACK" strokeType="INSIDE" width="172.0" />
+      <Label fx:id="txt_info" alignment="TOP_LEFT" layoutY="65.0" prefHeight="321.0" prefWidth="194.0" text="Informations" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tEmprunteurs" layoutX="215.0" layoutY="22.0" onMouseClicked="#getSelectedEm" prefHeight="264.0" prefWidth="371.0">
+         <columns>
+            <TableColumn fx:id="id_etudiant" prefWidth="117.0" text="etudiant" />
+            <TableColumn fx:id="id_livre" prefWidth="124.0" text="livre" />
+            <TableColumn fx:id="retour_livre" prefWidth="130.0" text="retourLivre" />
+         </columns>
+      </TableView>
+      <TextField fx:id="txt_id_etudiant" layoutX="215.0" layoutY="290.0" promptText="Id Etudiant" />
+      <TextField fx:id="txt_code_livre" layoutX="215.0" layoutY="320.0" promptText="Code Livre" />
+      <TextField fx:id="txt_date_retour_livre" layoutX="215.0" layoutY="349.0" promptText="Date de retour" />
+      <Button layoutX="437.0" layoutY="293.0" mnemonicParsing="false" onMouseClicked="#AjouterEm" prefHeight="25.0" prefWidth="113.0" text="Ajouter" />
+      <Button layoutX="439.0" layoutY="333.0" mnemonicParsing="false" onMouseClicked="#getInfos" text="Plus d'information" />
+      <Button layoutX="439.0" layoutY="370.0" mnemonicParsing="false" onMouseClicked="#refreshEm" text="Actualiser" />
+      <Button layoutX="20.0" layoutY="22.0" mnemonicParsing="false" onMouseClicked="#back_em" text="&lt;---" />
+   </children>
+</AnchorPane>
